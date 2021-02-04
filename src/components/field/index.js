@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import {
   View,
-  ViewPropTypes,
   TextInput,
   Animated,
   StyleSheet,
   Platform,
-  ViewPropTypes,
+  ViewProps,
 } from 'react-native';
 
 import Line from '../line';
@@ -84,9 +83,9 @@ export default class TextField extends PureComponent {
 
     labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: ViewPropTypes.style,
-    titleTextStyle: ViewPropTypes.style,
-    affixTextStyle: ViewPropTypes.style,
+    labelTextStyle: ViewProps.style,
+    titleTextStyle: ViewProps.style,
+    affixTextStyle: ViewProps.style,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -117,8 +116,8 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    containerStyle: (ViewProps || View.propTypes).style,
+    inputContainerStyle: (ViewProps || View.propTypes).style,
   };
 
   static inputContainerStyle = styles.inputContainer;
