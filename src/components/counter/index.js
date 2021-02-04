@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { ViewProps } from 'react-native';
+import { View } from 'react-native';
 
 import styles from './styles';
 
@@ -12,7 +12,7 @@ export default class Counter extends PureComponent {
     baseColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
 
-    style: ViewProps.style,
+    style: View.propTypes.style,
   };
 
   render() {

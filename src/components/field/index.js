@@ -6,7 +6,7 @@ import {
   Animated,
   StyleSheet,
   Platform,
-  ViewProps,
+  ViewProps
 } from 'react-native';
 
 import Line from '../line';
@@ -83,9 +83,9 @@ export default class TextField extends PureComponent {
 
     labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: ViewProps.style,
-    titleTextStyle: ViewProps.style,
-    affixTextStyle: ViewProps.style,
+    labelTextStyle: (ViewProps || View.propTypes).style,
+    titleTextStyle: (ViewProps || View.propTypes).style,
+    affixTextStyle: (ViewProps || View.propTypes).style,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
