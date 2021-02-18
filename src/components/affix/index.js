@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated, View, ViewProps } from 'react-native';
+import { Animated } from 'react-native';
 
 import styles from './styles';
 
@@ -11,7 +11,6 @@ export default class Affix extends PureComponent {
 
   static propTypes = {
     numberOfLines: PropTypes.number,
-    style: (ViewProps || View.propTypes).style,
 
     color: PropTypes.string.isRequired,
     fontSize: PropTypes.number.isRequired,

@@ -5,8 +5,7 @@ import {
   TextInput,
   Animated,
   StyleSheet,
-  Platform,
-  ViewProps
+  Platform
 } from 'react-native';
 
 import Line from '../line';
@@ -83,10 +82,6 @@ export default class TextField extends PureComponent {
 
     labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: (ViewProps || View.propTypes).style,
-    titleTextStyle: (ViewProps || View.propTypes).style,
-    affixTextStyle: (ViewProps || View.propTypes).style,
-
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
@@ -114,10 +109,7 @@ export default class TextField extends PureComponent {
     renderRightAccessory: PropTypes.func,
 
     prefix: PropTypes.string,
-    suffix: PropTypes.string,
-
-    containerStyle: (ViewProps || View.propTypes).style,
-    inputContainerStyle: (ViewProps || View.propTypes).style,
+    suffix: PropTypes.string
   };
 
   static inputContainerStyle = styles.inputContainer;
